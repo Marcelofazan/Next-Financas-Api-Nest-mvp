@@ -1,5 +1,5 @@
 ## 🌐 Next-Financas-Api-Nest-mvp
-Exemplo de projeto de Finanças em Arquitetura Modular em Next 13 e Nest e com autenticação Jwt e banco de dados Postgres.
+Aplicativo de Finanças Pessoais com Arquitetura Modular em Next 13 e Nest com autenticação Jwt e banco de dados Postgres.
 
 #### 🎨 Aqui está uma demonstração do projeto
 https://next-financas-api-nest-ui.onrender.com/login
