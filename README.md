@@ -56,3 +56,8 @@ npm run dev
 
 A aplicação ira iniciar em **http://localhost:5173**
 
+#### 🔍 Executar Testes Unitários
+```bash
+cd backend
+npx jest --config ./test/jest-e2e.json
+```
