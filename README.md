@@ -1,4 +1,4 @@
-## Next-Financas-Api-Nest
+## Next-Financas-Api-Nest-mvp
 Exemplo de projeto de Finanças em Arquitetura modular em Next 13 e Node.js com autenticação Jwt e banco de dados Postgres.
 
 #### 🎨 Aqui está uma demonstração do projeto
