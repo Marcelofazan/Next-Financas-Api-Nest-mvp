@@ -1,13 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { App } from 'supertest/types';
 import { AppModule } from './../src/app.module';
 
 describe('AppController (e2e)', () => {
-  let app: INestApplication<App>;
+  let app: INestApplication;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -16,10 +15,16 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  // Fecha a aplicação e limpa conexões pendentes do banco
+  afterAll(async () => {
+    await app.close();
+  });
+
+  // Teste atualizado para refletir o seu AppController real
+  it('/health (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/health') // Alterado de '/' para '/health'
       .expect(200)
-      .expect('Hello World!');
+      .expect({ status: 'ok' }); // Alterado para o formato JSON correto
   });
 });
